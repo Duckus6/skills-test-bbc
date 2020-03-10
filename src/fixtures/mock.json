@@ -1,0 +1,18 @@
+{
+  "title": "Test Article",
+  "body": [
+    {
+      "type": "heading",
+      "model": {
+        "text": "Test Heading"
+      }
+    },
+    {
+      "type": "paragraph",
+      "model": {
+        "text": "Test Paragraph"
+      }
+    }
+  ]
+
+}
