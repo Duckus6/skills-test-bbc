@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the server returns 200 code renders 1`] = `
+"<Article articleID=\\"article1.json\\">
+  <div>
+    <div>
+       
+      <Heading text=\\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\\">
+        <h4>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit
+        </h4>
+      </Heading>
+      <Paragraph text=\\"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.\\">
+        <p>
+          Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.
+        </p>
+      </Paragraph>
+      <Image url=\\"https://avatars1.githubusercontent.com/u/16746643?s=460&v=4\\" altText=\\"Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel\\" height=\\"420\\" width=\\"640\\">
+        <img src=\\"https://avatars1.githubusercontent.com/u/16746643?s=460&v=4\\" alt=\\"Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel\\" height=\\"420\\" width=\\"640\\" />
+      </Image>
+      <List type=\\"unordered\\" items={{...}}>
+        <ul>
+          <li>
+            Vestibulum viverra viverra ullamcorper
+          </li>
+          <li>
+            Aenean ut felis hendrerit, scelerisque est sed, rhoncus sem
+          </li>
+        </ul>
+      </List>
+      <List type=\\"ordered\\" items={{...}}>
+        <ol>
+          <li>
+            Vestibulum viverra viverra ullamcorper
+          </li>
+          <li>
+            Aenean ut felis hendrerit, scelerisque est sed, rhoncus sem
+          </li>
+        </ol>
+      </List>
+    </div>
+  </div>
+</Article>"
+`;
+
+exports[`the server returns 500 error renders 1`] = `
+"<Article articleID=\\"article1.json\\">
+  <div />
+</Article>"
+`;
