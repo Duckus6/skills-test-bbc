@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import * as PropTypes from 'prop-types';
 
 const List = ({type,items})=>{
     const listItems = items.map(item=><li>{item}</li>);
