@@ -2,7 +2,8 @@ import React from 'react';
 import * as PropTypes from 'prop-types';
 
 const List = ({type,items})=>{
-    const listItems = items.map(item=><li>{item}</li>);
+    const uniqueListID = Math.random().toString(36).slice(2);
+    const listItems = items.map((item,i)=><li key={`List${uniqueListID}_${i}`}>{item}</li>);
     const orderedList = (children)=>{
         return <ol>{children}</ol>
     };
