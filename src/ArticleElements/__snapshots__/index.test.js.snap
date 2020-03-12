@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the server returns 200 code render lists renders ordered list 1`] = `
+<ol>
+  <li>
+    item1
+  </li>
+  <li>
+    item2
+  </li>
+</ol>
+`;
+
+exports[`the server returns 200 code render lists renders unordered list 1`] = `
+<ul>
+  <li>
+    itemA
+  </li>
+  <li>
+    itemB
+  </li>
+</ul>
+`;
+
+exports[`the server returns 200 code renders heading element 1`] = `
+<h4>
+  mockHeading
+</h4>
+`;
+
+exports[`the server returns 200 code renders image element 1`] = `
+<img
+  alt="image text"
+  height="420"
+  src="https://avatars1.githubusercontent.com/u/16746643?s=460&v=4"
+  width="640"
+/>
+`;
+
+exports[`the server returns 200 code renders paragraph element 1`] = `<p />`;
