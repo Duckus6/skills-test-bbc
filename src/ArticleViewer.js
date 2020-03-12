@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import ArticleAPI from './ArticleAPI';
 import Article from './Article';
@@ -6,7 +6,7 @@ import Article from './Article';
 function ArticleViewer() {
     const API = new ArticleAPI();
     const [articles,setArticles] = useState([]);
-    useEffect(()=>{
+    React.useEffect(()=>{
         API.getArticles().then(
             articles=>{
                 setArticles(articles);

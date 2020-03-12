@@ -93,4 +93,5 @@ const mockInvalidArticle =
             }
         ]
     };
-export {mockArticles, mockArticle,mockInvalidArticle};
+const mockError = '[Error: Request failed with status code 500]';
+export {mockArticles, mockArticle,mockInvalidArticle,mockError};

@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import * as PropTypes from 'prop-types';
 import ArticleAPI from './ArticleAPI';
 import ArticleElements from './ArticleElements';
@@ -7,7 +7,7 @@ import ArticleElements from './ArticleElements';
 const Article = ({articleID}) => {
     const API= new ArticleAPI();
     const [articleData,setArticleData] = useState(null);
-    useEffect(()=>{
+    React.useEffect(()=>{
         API.getArticle(articleID).then(
             articleData =>{
                 setArticleData(articleData);
