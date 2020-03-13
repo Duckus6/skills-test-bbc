@@ -1,14 +1,15 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 
-const List = ({type,items})=>{
+
+const List = ({type,items,className})=>{
     const uniqueListID = Math.random().toString(36).slice(2);
     const listItems = items.map((item,i)=><li key={`List${uniqueListID}_${i}`}>{item}</li>);
     const orderedList = (children)=>{
-        return <ol>{children}</ol>
+        return <ol className={className}>{children}</ol>
     };
     const unorderedList = (children)=>{
-        return <ul>{children}</ul>
+        return <ul className={className}>{children}</ul>
     };
 
 

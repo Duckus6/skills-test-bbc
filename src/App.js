@@ -1,11 +1,10 @@
 import React from 'react';
-import './App.css';
+import styles from "./App.module.css";
 import ArticleViewer from "./ArticleViewer";
 
 function App() {
     return (
-        <div className="App">
-            <h3>Header</h3>
+        <div className={styles.App}>
             <ArticleViewer/>
         </div>
 

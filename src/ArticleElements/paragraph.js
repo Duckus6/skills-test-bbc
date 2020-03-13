@@ -1,9 +1,9 @@
 import React from 'react';
 import * as PropTypes from 'prop-types';
 
-const Paragraph = ({text})=>{
+const Paragraph = ({text,className})=>{
     return(
-        <p>
+        <p className={className}>
             {text}
         </p>
     )
