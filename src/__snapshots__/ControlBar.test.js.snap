@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+"<div>
+  <button className=\\"arrow-button previous\\" onClick={[Function: goBackwards]}>
+    ←
+  </button>
+  <span>
+    1
+  </span>
+  <button className=\\"arrow-button next\\" onClick={[Function: goForwards]}>
+    →
+  </button>
+</div>"
+`;
