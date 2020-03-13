@@ -4,13 +4,11 @@ exports[`the server returns 200 code renders 1`] = `
 "<div>
   <div>
      
-    <Heading text=\\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\\" />
-    <Paragraph text=\\"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.\\" />
-    <Image url=\\"https://avatars1.githubusercontent.com/u/16746643?s=460&v=4\\" altText=\\"Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel\\" height=\\"420\\" width=\\"640\\" />
-    <List type=\\"unordered\\" items={{...}} />
-    <List type=\\"ordered\\" items={{...}} />
+    <Heading className=\\"component\\" text=\\"Lorem ipsum dolor sit amet, consectetur adipiscing elit\\" />
+    <Paragraph className=\\"component\\" text=\\"Etiam ornare nulla in sem pharetra, vel varius magna tempus. Praesent pulvinar eget dolor vitae elementum. Donec id velit at sem gravida tristique non vitae lorem.\\" />
+    <Image className=\\"component\\" url=\\"https://avatars1.githubusercontent.com/u/16746643?s=460&v=4\\" altText=\\"Vestibulum pellentesque laoreet urna, eget dignissim lorem maximus vel\\" height=\\"420\\" width=\\"640\\" />
+    <List className=\\"component\\" type=\\"unordered\\" items={{...}} />
+    <List className=\\"component\\" type=\\"ordered\\" items={{...}} />
   </div>
 </div>"
 `;
-
-exports[`the server returns 500 error renders 1`] = `"<div />"`;

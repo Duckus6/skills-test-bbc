@@ -7,6 +7,8 @@ exports[`renders 1`] = `
   </button>
   <span>
     1
+     of 
+    5
   </span>
   <button className=\\"arrow-button next\\" onClick={[Function: goForwards]}>
     →
