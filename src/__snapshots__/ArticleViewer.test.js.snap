@@ -1,47 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`the server returns 200 code Checking an article was read 1`] = `
-"<div className=\\"ArticleViewer\\">
-  <p>
-    We have 
-    5
-     Articles
-  </p>
-  <Article articleID=\\"article1.json\\" />
-  <ControlBar updateIndex={[Function: bound _dispatchAction]} index={0} total={5} />
-</div>"
-`;
+exports[`the server returns 200 code Checking an article was read 1`] = `"<div className=\\"container\\" />"`;
 
-exports[`the server returns 200 code renders 1`] = `
-"<div className=\\"ArticleViewer\\">
-  <p>
-    We have 
-    5
-     Articles
-  </p>
-  <Article articleID=\\"article1.json\\" />
-  <ControlBar updateIndex={[Function: bound _dispatchAction]} index={0} total={5} />
-</div>"
-`;
+exports[`the server returns 200 code renders 1`] = `"<div className=\\"container\\" />"`;
 
-exports[`the server returns 500 error renders 1`] = `
-"<div className=\\"ArticleViewer\\">
-  <p>
-    We have 
-    0
-     Articles
-  </p>
-  <ControlBar updateIndex={[Function: bound _dispatchAction]} index={0} total={0} />
-</div>"
-`;
+exports[`the server returns 500 error renders 1`] = `"<div className=\\"container\\" />"`;
 
-exports[`the server returns an empty list of articles renders with no articles 1`] = `
-"<div className=\\"ArticleViewer\\">
-  <p>
-    We have 
-    0
-     Articles
-  </p>
-  <ControlBar updateIndex={[Function: bound _dispatchAction]} index={0} total={0} />
-</div>"
-`;
+exports[`the server returns an empty list of articles renders with no articles 1`] = `"<div className=\\"container\\" />"`;

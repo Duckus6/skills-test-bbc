@@ -25,7 +25,6 @@ describe("the server returns 200 code",()=>{
     });
     afterEach(()=>{
         mock.reset();
-        console.log(mockUseEffect);
         mockUseEffect.mockImplementationOnce(f=>f());
     });
     test("renders", async (done) => {
@@ -35,7 +34,6 @@ describe("the server returns 200 code",()=>{
             jest.runAllImmediates();
         });
         wrapper.update();
-        console.log(wrapper.debug());
         expect(wrapper.debug()).toMatchSnapshot();
         done();
     });
@@ -47,8 +45,10 @@ describe("the server returns 200 code",()=>{
         await act(async ()=>{
             jest.runAllImmediates()
         });
-        console.log(wrapper.debug());
         expect(wrapper.debug()).toMatchSnapshot();
+    });
+    test("Checking the rate article button displays",()=>{
+        //TODO
     })
 
 });
@@ -80,4 +80,6 @@ describe("the server returns 500 error",()=>{
         const wrapper = shallow(<ArticleViewer/>);
         expect(wrapper.debug()).toMatchSnapshot();
     })
+
+
 });
