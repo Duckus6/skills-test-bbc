@@ -10,7 +10,7 @@ function ControlBar({updateIndex,index, total}) {
     };
     return(<div>
         <button className={"arrow-button previous"} onClick={goBackwards}>&#8592;</button>
-        <span>{index+1}</span>
+        <span>{index+1} of {total}</span>
         <button className={"arrow-button next"} onClick={goForwards}>&#8594;</button>
     </div>)
 }
