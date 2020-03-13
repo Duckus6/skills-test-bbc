@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import AxiosMockAdapter from 'axios-mock-adapter';
-import {mockArticle,mockArticles,mockInvalidArticle, mockError} from "./fixtures/articles";
+import {mockArticle,mockArticles,mockInvalidArticle} from "./fixtures/articles";
 import Article from "./Article";
 import {shallow} from "enzyme/";
 import {act} from "@testing-library/react/";
@@ -26,7 +26,7 @@ describe("the server returns 200 code",()=>{
     });
     test('renders', async (done) => {
         jest.useFakeTimers();
-        const wrapper = shallow(<Article articleID={mockArticles[0]}/>);
+        const wrapper = shallow(<Article article={mockArticle}/>);
         await act(async ()=>{
             jest.runAllImmediates();
         });
@@ -37,7 +37,7 @@ describe("the server returns 200 code",()=>{
     });
     test('renders error when invalid element is received', async (done) => {
         jest.useFakeTimers();
-        const wrapper = shallow(<Article articleID={mockArticles[1]}/>);
+        const wrapper = shallow(<Article article={mockInvalidArticle}/>);
         await act(async ()=>{
             jest.runAllImmediates();
         });
@@ -49,21 +49,7 @@ describe("the server returns 200 code",()=>{
 });
 
 
-describe("the server returns 500 error",()=>{
-    beforeAll(()=>{
-        mock.onGet(`data/${mockArticles[0]}`).reply(500,
-            mockError
-        );
-        jest.spyOn(React,"useEffect").mockImplementationOnce(f=>f());
-    });
-    afterEach(()=>{
-        mock.reset();
-    });
-    test('renders', () => {
-        const wrapper = shallow(<Article articleID={mockArticles[0]}/>);
-        expect(wrapper.debug()).toMatchSnapshot();
-    })
-});
+
 
 
 

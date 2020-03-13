@@ -1,20 +1,9 @@
-import React,{useState} from 'react';
+import React from 'react';
 import * as PropTypes from 'prop-types';
-import ArticleAPI from './ArticleAPI';
 import ArticleElements from './ArticleElements';
+import styles from "./Article.module.css"
 
-
-const Article = ({articleID}) => {
-    const API= new ArticleAPI();
-    const [articleData,setArticleData] = useState(null);
-    React.useEffect(()=>{
-        API.getArticle(articleID).then(
-            articleData =>{
-                setArticleData(articleData);
-            }
-        ).catch(
-            err=>console.log(err));
-    },[articleID]);
+const Article = ({article}) => {
 
     const formatArticleElement = (articleElement)=>{
         const{type,model}=articleElement;
@@ -22,11 +11,11 @@ const Article = ({articleID}) => {
         if (!Component){
             return (<p className={'error'}>An error has occurred</p>)
         }
-        return <Component {...model}/>
+        return <Component className={styles.component} {...model}/>
     };
 
     return(<div>
-        {!!articleData && <div> {articleData.body.map(articleElement=>formatArticleElement(articleElement))}</div>}
+        {!!article && <div> {article.body.map(articleElement=>formatArticleElement(articleElement))}</div>}
     </div>)
 };
 
@@ -34,6 +23,6 @@ const Article = ({articleID}) => {
 
 
 Article.propTypes = {
-    articleID: PropTypes.string.isRequired
+    article: PropTypes.object.isRequired
 };
 export default Article;
